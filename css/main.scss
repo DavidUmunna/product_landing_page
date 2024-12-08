@@ -1,48 +1,24 @@
-.body {
-    background-color: #0000;
-}
+
+
 
 nav {
     font-size: 18px;
     background-color:  black;
-    color: black;
+
 }
 .container {
     display: flex;
 }
-.card {
-    width: 17%;
-    padding: 10px;
-    text-align: center;
-    margin: 5px;
-    border-radius: 10px;
-    background-color: #fff;
-    /*box-shadow: 0 4px 8px rgb(0, 0, 0, 0.3);*/
+.card_1 {
+  
     
-    :hover {
-       
-        /*box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);*/
+    
+    a {
+      
+        
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
-    h3 {
-        font-weight: 600;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-    p {
-        font-style:oblique;
-        text-align: center;
-    }
-    button {
-        background-color: rgb(65, 65, 240);
-        color: #fff;
-        font-weight: 600;
-        border-radius: 10px;
-        padding: 8px 6px;
-        border: none;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    button:hover {
+    a:hover {
         background-color: rgb(35, 35, 162);
         transform: translateY(-10px) scale(1.05);
     }
@@ -66,11 +42,22 @@ nav {
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+.logo {
+    transition: transform 0.3s ease;
+    
+
+    :hover {
+        transition:  box-shadow 0.3s ease;
+        background-color: rgb(0, 0, 0);
+        transform:  scale(1.09);
+    }
 }
 
 @media (max-width: 576px) { 
     nav{
-         font-size: 16px;
+        font-size: 5px;
     }
    
 
@@ -82,8 +69,8 @@ nav {
 
 @media (min-width: 576px) and (max-width: 768px) { 
     nav{
-        font-size: 18px;
-   }
+        font-size: 14px;
+    }
 
 
 }
@@ -93,7 +80,7 @@ nav {
 @media (min-width: 768px) and (max-width: 992px)  { 
     nav{
         font-size: 20px;
-   }
+    }
 
 } 
 
@@ -101,5 +88,16 @@ nav {
 @media (min-width: 992px) and (max-width: 1200px)  { 
     nav{
         font-size: 22px;
-   }
+        flex: auto;
+    }
+    .navbar-nav {
+        display: flex !important;
+    }
+    
+      /* Hide hamburger menu on large screens */
+    .navbar-toggler {
+        display: none;
+    }
+    
+
 } 
