@@ -77,13 +77,28 @@ item.style.marginBottom='15px'
 item.style.paddingBottom='-5px'
 
 //creating a div
-var newDiv = document.createElement('div');
-var innerDiv = document.createElement('div');
+function create_div(){
+    var div=document.createElement('div')
+    return div
+
+}
+
+var newDiv = create_div()
+var innerDiv = create_div()
+var button_div=create_div()//created button div 
 innerDiv.className='image-container'
-const img = document.createElement("img");
-img.src = "assets/shoes_1.jpg "; // Set image source
-img.alt = "Image"; // Set alt text
-img.className='img-fluid rounded-3  mx-auto card-img-top'
+
+
+
+function create_img(){
+    var img = document.createElement("img");
+    img.src = "assets/shoes_1.jpg "; // Set image source
+    img.alt = "Image"; // Set alt text
+    img.className='img-fluid rounded-3  mx-auto card-img-top'
+    return img
+
+}
+var img=create_img()
 
 const section=document.querySelector('section')
 section.append(newDiv)
@@ -91,7 +106,50 @@ section.append(newDiv)
 innerDiv.appendChild(img)
 newDiv.appendChild(innerDiv)
 
-const text_div=document.createElement('div')
+var text_div= create_div()
+innerDiv.appendChild(text_div)
+var container=document.getElementById('cont')
+
+container.appendChild(newDiv)
+function create_paragraph(div,str){
+        const paragraph=document.createElement('p')
+        paragraph.textContent=str
+        paragraph.className='card-text'
+        return paragraph
+
+}
+
+
+
+function create_header(div,str){
+    const heading=document.createElement('h5')
+    heading.textContent=str
+    heading.className='card-title'
+    div.appendChild(heading)
+}
+function create_link(str){
+    const link=document.createElement('a')
+    link.textContent=str
+    link.style.color='white'
+    link.className='btn btn-primary button_container'
+    
+    return link
+}
+
+
+
+h1=create_header(text_div,'shoe')
+p1=create_paragraph(text_div,'white sneakers')
+var a1=create_link('add to cart')
+text_div.appendChild(p1)
+button_div.appendChild(a1)
+text_div.appendChild(button_div)
+newDiv.className='col-md-3 col-sm-6'
+innerDiv.className='card h-100 text-center'
+text_div.className='card-body card_1'
+button_div.className='button_container'
+console.log(newDiv)
+
 
 
 
