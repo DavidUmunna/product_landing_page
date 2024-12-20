@@ -59,7 +59,7 @@ nav {
   transition: transform 0.3s ease; /* Smooth transition */
 }
 .dropdown-toggle :hover {
-  background-color: #555; /* Slightly lighter background */
+  background-color: #dbd4d4; /* Slightly lighter background */
 }
 
 .dropdown-menu a {
